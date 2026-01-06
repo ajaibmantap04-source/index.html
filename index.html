@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Uppercase Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Convert Huruf ke KAPITAL</h2>
+
+    <textarea id="inputText" placeholder="Masukkan teks di sini..."></textarea>
+
+    <button onclick="convertUppercase()">UBAH KE HURUF BESAR</button>
+
+    <textarea id="outputText" placeholder="Hasil..." readonly></textarea>
+</div>
+
+<script>
+    function convertUppercase() {
+        const text = document.getElementById("inputText").value;
+        document.getElementById("outputText").value = text.toUpperCase();
+    }
+</script>
+
+</body>
+</html>
